@@ -1,7 +1,7 @@
 import React from 'react'
 import AuthIllustration from "/images/auth_illustration.png"
 import { Link } from 'react-router-dom'
-import LoginForm from '../Components/Auth/loginForm'
+import LoginForm from '../Components/Auth/LoginForm'
 
 const LoginPage = () => {
   return (
