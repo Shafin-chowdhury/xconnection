@@ -1,0 +1,167 @@
+/* src/index.css */
+@import "tailwindcss";
+
+@theme {
+  /* Container configuration */
+  --container-center: true;
+  --container-padding: 1rem;
+
+  /* Font families */
+  --font-family-inter: "Inter", sans-serif;
+
+  /* Custom colors */
+  --color-lwsGreen: #00D991;
+  --color-beige: #F5EFEB;
+  --color-mediumDark: #212E40;
+  --color-lighterDark: #cc69f9;
+}
+
+@layer base {
+  body {
+    font-family: "Playfair Display", serif;
+    background: var(--color-beige);
+    color: rgb(198, 6, 6); /* gray-100 */
+  }
+}
+
+/* Convert @layer components to regular CSS with custom properties */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  background: var(--color-lighterDark);
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--color-beige);
+}
+
+@media (min-width: 1024px) {
+  .btn-primary {
+    font-size: 1.125rem;
+  }
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  background: var(--color-lighterDark);
+  padding: 0.375rem;
+  font-weight: 500;
+  color: white;
+}
+
+.icon-btn:hover {
+  background: var(--color-beige);
+}
+
+.card {
+  border-radius: 0.375rem;
+  border: 1px solid #3F3F3F;
+  background: var(--color-mediumDark);
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    padding: 1.25rem 1.75rem;
+  }
+}
+
+.form-control {
+  margin-bottom: 1.5rem;
+}
+
+.form-control > * + * {
+  margin-top: 0.625rem;
+}
+
+.auth-label {
+  line-height: 138%;
+}
+
+@media (min-width: 1024px) {
+  .auth-label {
+    font-size: 1.125rem;
+  }
+}
+
+.auth-input {
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid rgb(204 204 204 / 0.14);
+  background: var(--color-beige);
+  padding: 0.375rem;
+}
+
+.auth-input:focus {
+  outline: none;
+}
+
+@media (min-width: 1024px) {
+  .auth-input {
+    padding: 0.75rem;
+  }
+}
+
+.post-avatar {
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+  border-radius: 9999px;
+}
+
+@media (min-width: 1024px) {
+  .post-avatar {
+    max-height: 3.625rem;
+    max-width: 3.625rem;
+  }
+}
+
+.action-modal-container {
+  position: absolute;
+  right: 100%;
+  top: 1.5rem;
+  min-width: 200px;
+  border-radius: 0.375rem;
+  border: 1px solid #3F3F3F;
+  background: var(--color-mediumDark);
+  padding: 1rem;
+  divide-y: 1px solid #3F3F3F;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.action-modal-container > button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.action-menu-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgb(243 244 246);
+  transition: all 0.2s;
+}
+
+/* Custom font class */
+.bbh-sans-bogle-regular {
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
